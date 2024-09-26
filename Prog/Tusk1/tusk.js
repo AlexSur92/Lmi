@@ -1,1 +1,4 @@
-000000
+function stringToArray(string){
+    return string.split(" ")
+    
+    }
