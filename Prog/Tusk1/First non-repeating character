@@ -1,0 +1,9 @@
+const firstNonRepeatingLetter = string => {
+	let temp = string.toLowerCase();
+  for(let i = 0; i < temp.length; i++) {
+		let subStringAfter =  temp.slice(i + 1),
+				subStringBefore = temp.slice(0, i);
+		if(!subStringAfter.includes(temp[i]) && !subStringBefore.includes(temp[i])) return string[i];
+	}
+	return "";
+}
