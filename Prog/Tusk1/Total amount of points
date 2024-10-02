@@ -1,0 +1,15 @@
+function points(games) {
+return games.reduce((sum, point) => {
+    const [x, y] = point.split(':').map((i) => parseFloat(i));
+
+    if (x > y) {
+      sum += 3;
+    } else if (x < y) {
+      sum += 0; 
+    } else if (x === y) {
+      sum += 1;
+    }
+
+    return sum;
+  }, 0);
+}
